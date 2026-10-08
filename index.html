@@ -1,234 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SHAZIN — Personal profile.">
-  <meta name="theme-color" content="#080808">
-  <meta property="og:title" content="SHAZIN">
-  <meta property="og:description" content="SHAZIN — Personal profile.">
-  <meta property="og:type" content="website">
-  <title>SHAZIN</title>
+  <title>Shazin - Personal Website</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    (() => {
-      try {
-        const saved = localStorage.getItem("shazin-theme");
-        document.documentElement.dataset.theme = saved || "dark";
-      } catch (_) {
-        document.documentElement.dataset.theme = "dark";
-      }
-    })();
-  </script>
 </head>
-
-<body class="locked">
-  <!-- START / LOCK SCREEN -->
-  <div class="startup-screen" id="startup-screen" aria-label="Welcome screen">
-    <div class="startup-glow" aria-hidden="true"></div>
-    <div class="startup-content">
-      <div class="startup-top">
-        <span class="startup-brand">SHAZIN</span>
-        <span class="startup-status">PERSONAL PROFILE</span>
-      </div>
-
-      <div class="startup-center">
-        <div class="startup-monogram" aria-hidden="true">S</div>
-        <p class="startup-eyebrow">Welcome</p>
-        <h1>SHAZIN</h1>
-        <p class="startup-date" id="startup-date">Loading date…</p>
-
-        <button class="continue-button interactive" id="continue-button" type="button">
-          <span>Continue</span>
-          <span class="continue-arrow" aria-hidden="true">→</span>
-        </button>
-
-        <div class="loading-wrap" id="loading-wrap" aria-hidden="true">
-          <div class="loading-label">
-            <span>Starting</span>
-            <span id="loading-percent">0%</span>
-          </div>
-          <div class="loading-track">
-            <div class="loading-bar" id="loading-bar"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="startup-bottom">
-        <span>Press Continue to enter</span>
-        <span>© 2026 SHAZIN</span>
-      </div>
-    </div>
-  </div>
-
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
-
-  <header class="site-header" id="site-header">
-    <a class="brand" href="#home" aria-label="SHAZIN home">SHAZIN<span>.</span></a>
-
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#home" class="nav-link active">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-link">Contact</a>
+<body>
+  <header>
+    <h1>SHAZIN</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-
-    <div class="header-actions">
-      <button class="theme-toggle interactive" type="button" aria-label="Switch theme" aria-pressed="false">
-        <span class="theme-icon" aria-hidden="true"></span>
-        <span class="theme-label">Light</span>
-      </button>
-      <button class="menu-toggle interactive" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span>
-      </button>
-    </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <div class="mobile-menu-top">
-        <span>Navigation</span>
-        <button class="menu-close interactive" type="button" aria-label="Close menu">Close</button>
-      </div>
-      <nav aria-label="Mobile navigation">
-        <a href="#home">01 <span>Home</span></a>
-        <a href="#about">02 <span>About</span></a>
-        <a href="#contact">03 <span>Contact</span></a>
-      </nav>
-      <button class="mobile-theme theme-toggle interactive" type="button" aria-label="Switch theme" aria-pressed="false">
-        <span class="theme-icon" aria-hidden="true"></span>
-        <span class="theme-label">Light</span>
-      </button>
-    </div>
-  </div>
+  <main>
+    <section id="home" class="hero">
+      <h2>Welcome to My Website</h2>
+      <p>Hello! I am Shazin. This is my simple personal website.</p>
+      <button onclick="showMessage()">Click Here</button>
+      <p id="message"></p>
+    </section>
 
-  <main id="main-content">
-    <!-- HERO -->
-    <section class="hero section" id="home" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-orbit" aria-hidden="true"></div>
-
-      <div class="hero-content">
-        <div class="hero-copy">
-          <p class="eyebrow reveal">Personal profile / 01</p>
-          <h1 id="hero-title" class="hero-title reveal">
-            <span>SHAZIN</span>
-            <span class="hero-title-light">A personal<br><em>space.</em></span>
-          </h1>
-          <p class="hero-intro reveal">
-            A simple place to learn more about Shazin, connect, and stay in touch.
-          </p>
-
-          <div class="hero-actions reveal">
-            <a class="primary-button interactive" href="#about">
-              <span>Explore profile</span>
-              <span>↓</span>
-            </a>
-            <a class="text-button interactive" href="#contact">Get in touch <span>↗</span></a>
-          </div>
-        </div>
-
-        <div class="hero-side reveal">
-          <div class="side-line"></div>
-          <p>Based in</p>
-          <strong>Kannur, Kerala</strong>
-          <span>India</span>
-        </div>
-      </div>
-
-      <div class="hero-meta" aria-label="Profile information">
-        <span>SHAZIN</span>
-        <span>PERSONAL PROFILE</span>
-        <span>INDIA</span>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Welcome to my personal profile.</p>
+      <p>I am interested in learning technology and creating simple websites.</p>
+      <div class="details">
+        <p><b>Name:</b> Shazin</p>
+        <p><b>Location:</b> Kannur, Kerala, India</p>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section content-section" id="about" aria-labelledby="about-title">
-      <div class="section-heading reveal">
-        <span class="section-number">02</span>
-        <span class="section-label">About</span>
-      </div>
-
-      <div class="about-layout">
-        <div>
-          <p class="eyebrow reveal">A little introduction</p>
-          <h2 id="about-title" class="display-heading reveal">Hello,<br><em>I'm Shazin.</em></h2>
-        </div>
-
-        <div class="about-copy">
-          <p class="lead reveal">
-            Welcome to my personal profile.
-          </p>
-          <p class="reveal">
-            This website is a simple digital space for my profile and contact details. Nothing here is meant to be complicated — just a clean place to connect.
-          </p>
-
-          <dl class="facts reveal">
-            <div><dt>Name</dt><dd>SHAZIN</dd></div>
-            <div><dt>Location</dt><dd>Kannur, Kerala, India</dd></div>
-            <div><dt>Contact</dt><dd><a href="tel:+919400701146">+91 94007 01146</a></dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section content-section contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="section-heading reveal">
-        <span class="section-number">03</span>
-        <span class="section-label">Contact</span>
-      </div>
-
-      <div class="contact-layout">
-        <div>
-          <p class="eyebrow reveal">Let's connect</p>
-          <h2 id="contact-title" class="display-heading reveal">Say<br><em>hello.</em></h2>
-        </div>
-
-        <div class="contact-cards reveal">
-          <a class="contact-card interactive" href="tel:+919400701146">
-            <span class="card-label">Phone</span>
-            <strong>+91 94007 01146</strong>
-            <span class="card-arrow">↗</span>
-          </a>
-
-          <a class="contact-card whatsapp-card interactive"
-             href="https://wa.me/919400701146"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Chat with Shazin on WhatsApp">
-            <span class="card-label">WhatsApp</span>
-            <strong>Message on WhatsApp</strong>
-            <span class="card-arrow">↗</span>
-          </a>
-
-          <a class="contact-card interactive"
-             href="https://www.instagram.com/shazinshafeeq_/"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Open Shazin's Instagram profile">
-            <span class="card-label">Instagram</span>
-            <strong>@shazinshafeeq_</strong>
-            <span class="card-arrow">↗</span>
-          </a>
-        </div>
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <p><b>Phone:</b> <a href="tel:+919400701146">+91 94007 01146</a></p>
+        <p><b>WhatsApp:</b> <a href="https://wa.me/919400701146" target="_blank">Message Me</a></p>
+        <p><b>Instagram:</b> <a href="https://www.instagram.com/shazinshafeeq_/" target="_blank">@shazinshafeeq_</a></p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>© 2026 SHAZIN. All rights reserved.</p>
-      <div class="footer-links">
-        <a class="interactive" href="tel:+919400701146">+91 94007 01146</a>
-        <a class="interactive" href="https://wa.me/919400701146" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
-        <a class="interactive" href="https://www.instagram.com/shazinshafeeq_/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-      </div>
-    </div>
+  <footer>
+    <p>Created by Muhammed Shazin C</p>
+    <p>Contact: 9400 701146</p>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
